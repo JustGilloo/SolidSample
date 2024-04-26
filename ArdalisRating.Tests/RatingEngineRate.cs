@@ -20,7 +20,7 @@ public void ReturnsRatingOf10000For200000LandPolicy()
     File.WriteAllText("policy.json", json);
 
     var engine = new RatingEngine();
-    engine.Rate();
+    engine.DefineRating();
     var result = engine.Rating;
 
     Assert.Equal(10000, result);
@@ -39,7 +39,7 @@ public void ReturnsRatingOf10000For200000LandPolicy()
             File.WriteAllText("policy.json", json);
 
             var engine = new RatingEngine();
-            engine.Rate();
+            engine.DefineRating();
             var result = engine.Rating;
 
             Assert.Equal(0, result);
